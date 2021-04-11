@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17E202" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="DocumentFolder" representedClassName="DocumentFolder" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="documents" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ReaderDocument" inverseName="folder" inverseEntity="ReaderDocument" syncable="YES"/>
+    </entity>
+    <entity name="ReaderDocument" representedClassName="ReaderDocument" syncable="YES">
+        <attribute name="fileDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="fileName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="filePath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fileSize" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="fileURL" optional="YES" attributeType="URI" syncable="YES"/>
+        <attribute name="guid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastOpen" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="pageCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="pageNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tagData" optional="YES" attributeType="Binary" syncable="YES"/>
+        <relationship name="folder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DocumentFolder" inverseName="documents" inverseEntity="DocumentFolder" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="DocumentFolder" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="ReaderDocument" positionX="-54" positionY="-9" width="128" height="225"/>
+    </elements>
+</model>
